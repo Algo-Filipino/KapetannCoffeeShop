@@ -16,6 +16,6 @@
 
 > Website Link: *[KapeTann Coffee Shop Website](https://kapetanncoffeeshop.infinityfreeapp.com/)*  
 
-[![kapeTann Login Page](/images/login.PNG)](https://kapetanncoffeeshop.infinityfreeapp.com/)  
+[![kapeTann Login Page](/assets/images/login.PNG)](https://kapetanncoffeeshop.infinityfreeapp.com/)  
 
-[![kapeTann Home Page](/images/BrewVoyage%20Home%20Page.PNG)](https://kapetanncoffeeshop.infinityfreeapp.com/)  
+[![kapeTann Home Page](/assets/images/BrewVoyage%20Home%20Page.PNG)](https://kapetanncoffeeshop.infinityfreeapp.com/) 
