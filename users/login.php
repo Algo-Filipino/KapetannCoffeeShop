@@ -4,8 +4,8 @@
         <meta charset="utf-8"/>
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>KapeTann | Login Form</title>
-        <link rel="stylesheet" href="css/login.css"/>
-        <link rel="icon" type="image/x-icon" href="images/favicon.ico"><!-- Favicon / Icon -->
+        <link rel="stylesheet" href="../assets/css/login.css"/>
+        <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico"><!-- Favicon / Icon -->
         <script src="https://accounts.google.com/gsi/client" async defer></script>
     </head>
     <body>
@@ -37,7 +37,7 @@
         ?>
             <form class="form" method="post" name="login">
                 <center>
-                    <img src="images/logo.png" alt="" class="img img-fluid">
+                    <img src="../assets/images/logo.png" alt="" class="img img-fluid">
                 </center>
                 <hr />
                 <h1 class="login-title">Login</h1>

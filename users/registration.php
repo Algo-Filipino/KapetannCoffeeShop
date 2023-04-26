@@ -4,8 +4,8 @@
         <meta charset="utf-8"/>
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>KapeTann | Registration Form</title>
-        <link rel="stylesheet" href="css/login.css"/>
-        <link rel="icon" type="image/x-icon" href="images/favicon.ico"><!-- Favicon / Icon -->
+        <link rel="stylesheet" href="../assets/css/login.css"/>
+        <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico"><!-- Favicon / Icon -->
     </head>
     <body>
         <?php
@@ -41,7 +41,7 @@
         ?>
             <form class="form" action="" method="post">
                 <center>
-                    <img src="images/logo.png" alt="" class="img img-fluid">
+                    <img src="../assets/images/logo.png" alt="" class="img img-fluid">
                 </center>
                 <hr />
                 <h1 class="login-title">Registration</h1>

@@ -1,3 +1,8 @@
+<?php
+    //include auth_session.php file on all user panel pages
+    include("auth_session.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,17 +19,17 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Hhh_14Uam62GXGaTMcXWhhVkYg0EbDY&callback=initMap" async defer></script>
 
         <!-- Custom CSS File Link -->
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/convo.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/convo.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><!-- font awesome cdn link -->
-        <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico"><!-- Favicon / Icon -->
+        <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico"><!-- Favicon / Icon -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- Google font cdn link -->
     </head>
     <body>
         <!-- HEADER SECTION -->
         <header class="header">
             <a href="#" class="logo">
-                <img src="assets/images/logo.png" class="img-logo" alt="KapeTann Logo">
+                <img src="../assets/images/logo.png" class="img-logo" alt="KapeTann Logo">
             </a>
 
             <!-- MAIN MENU FOR SMALLER DEVICES -->
@@ -49,14 +54,14 @@
                             <a href="#contact" class="text-decoration-none">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a href="users/login.php" class="text-decoration-none">Login</a>
+                            <a href="logout.php" class="text-decoration-none">Logout</a>
                         </li>
                     </ul>
                 </div>
             </nav>
             <div class="icons">
                 <div class="fas fa-search" id="search-btn"></div>
-                <div class="fas fa-shopping-cart" id="cart-btn" onclick="redirectCart()"></div>
+                <div class="fas fa-shopping-cart" id="cart-btn"></div>
                 <div class="fas fa-bars" id="menu-btn"></div>
             </div>
 
@@ -84,7 +89,7 @@
         <!-- HERO SECTION -->
         <section class="home" id="home">
             <div class="content">
-                <h3>Welcome to KapeTann Coffee Shop, mga kap!</h3>
+                <h3>Welcome to KapeTann Coffee Shop, <?php echo $_SESSION['username']; ?>!</h3>
                 <p>
                     <strong>We are open 4:00 PM to 9:00 PM.</strong>
                 </p>
@@ -97,7 +102,7 @@
             <h1 class="heading"> <span>About</span> Us</h1>
             <div class="row g-0">
                 <div class="image">
-                    <img src="assets/images/about-img.png" alt="" class="img-fluid">
+                    <img src="../assets/images/about-img.png" alt="" class="img-fluid">
                 </div>
                 <div class="content">
                     <h3>Welcome to KapeTann!</h3>
@@ -129,104 +134,104 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="box">
-                                <img src="assets/images/cart-item-1.png" alt="" class="product-img">
+                                <img src="../assets/images/cart-item-1.png" alt="" class="product-img">
                                 <h3 class="product-title">Americano - Hot Espresso (12 OZ)</h3>
                                 <div class="price">₱45.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
+                                <a class="btn add-cart">Add to Cart</a>
                             </div>
                         </div><br />
                         <div class="col-md-4">
                             <div class="box">
-                                <img src="assets/images/cart-item-2.png" alt="" class="product-img">
+                                <img src="../assets/images/cart-item-2.png" alt="" class="product-img">
                                 <h3 class="product-title">Colombian Supremo Cup (12 OZ)</h3>
                                 <div class="price">₱40.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
+                                <a class="btn add-cart">Add to Cart</a>
                             </div>
                         </div><br />
                         <div class="col-md-4">
                             <div class="box">
-                                <img src="assets/images/cart-item-3.png" alt="" class="product-img">
+                                <img src="../assets/images/cart-item-3.png" alt="" class="product-img">
                                 <h3 class="product-title">Nitro Cold Brew w/ Straw (12 OZ)</h3>
                                 <div class="price">₱50.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
+                                <a class="btn add-cart">Add to Cart</a>
                             </div>
                         </div>
                     </div><br />
                     <div class="row">
                         <div class="col-md-4">
                             <div class="box">
-                                <img src="assets/images/cart-item-4.png" alt="" class="product-img">
+                                <img src="../assets/images/cart-item-4.png" alt="" class="product-img">
                                 <h3 class="product-title">Seasonal Single-Origin (12 OZ)</h3>
                                 <div class="price">₱30.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
+                                <a class="btn add-cart">Add to Cart</a>
                             </div>
                         </div><br />
                         <div class="col-md-4">
                             <div class="box">
-                                <img src="assets/images/cart-item-5.png" alt="" class="product-img">
+                                <img src="../assets/images/cart-item-5.png" alt="" class="product-img">
                                 <h3 class="product-title">Indonesian Sumatra Mandheling (12 OZ)</h3>
                                 <div class="price">₱40.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
+                                <a class="btn add-cart">Add to Cart</a>
                             </div>
                         </div><br />
                         <div class="col-md-4">
                             <div class="box">
-                                <img src="assets/images/cart-item-6.png" alt="" class="product-img">
+                                <img src="../assets/images/cart-item-6.png" alt="" class="product-img">
                                 <h3 class="product-title">Mint Mojito Iced Coffee (12 OZ)</h3>
                                 <div class="price">₱55.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
+                                <a class="btn add-cart">Add to Cart</a>
                             </div>
                         </div>
                     </div><br />
                     <div class="row row-to-hide">
                         <div class="col-md-4">
                             <div class="box">
-                                <img src="assets/images/cart-item-7.png" alt="" class="product-img">
+                                <img src="../assets/images/cart-item-7.png" alt="" class="product-img">
                                 <h3 class="product-title">Iced Americano (12 OZ)</h3>
                                 <div class="price">₱35.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
+                                <a class="btn add-cart">Add to Cart</a>
                             </div>
                         </div><br />
                         <div class="col-md-4">
                             <div class="box">
-                                <img src="assets/images/cart-item-8.png" alt="" class="product-img">
+                                <img src="../assets/images/cart-item-8.png" alt="" class="product-img">
                                 <h3 class="product-title">Specialty Brews (12 OZ)</h3>
                                 <div class="price">₱85.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
+                                <a class="btn add-cart">Add to Cart</a>
                             </div>
                         </div><br />
                         <div class="col-md-4">
                             <div class="box">
-                                <img src="assets/images/cart-item-9.png" alt="" class="product-img">
+                                <img src="../assets/images/cart-item-9.png" alt="" class="product-img">
                                 <h3 class="product-title">Seasonal Origin (12 OZ)</h3>
                                 <div class="price">₱80.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
+                                <a class="btn add-cart">Add to Cart</a>
                             </div>
                         </div>
                     </div><br />
                     <div class="row row-to-hide">
                         <div class="col-md-4">
                             <div class="box">
-                                <img src="assets/images/cart-item-10.png" alt="" class="product-img">
+                                <img src="../assets/images/cart-item-10.png" alt="" class="product-img">
                                 <h3 class="product-title">Ethiopian Yirgacheffe Cup (12 OZ)</h3>
                                 <div class="price">₱55.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
+                                <a class="btn add-cart">Add to Cart</a>
                             </div>
                         </div><br />
                         <div class="col-md-4">
                             <div class="box">
-                                <img src="assets/images/cart-item-11.png" alt="" class="product-img">
+                                <img src="../assets/images/cart-item-11.png" alt="" class="product-img">
                                 <h3 class="product-title">Cold Brew Tonic In a Cup (12 OZ)</h3>
                                 <div class="price">₱35.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
+                                <a class="btn add-cart">Add to Cart</a>
                             </div>
                         </div><br />
                         <div class="col-md-4">
                             <div class="box">
-                                <img src="assets/images/cart-item-12.png" alt="" class="product-img">
+                                <img src="../assets/images/cart-item-12.png" alt="" class="product-img">
                                 <h3 class="product-title">Caramel Cold Foam Cold Brew (12 OZ)</h3>
                                 <div class="price">₱55.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
+                                <a class="btn add-cart">Add to Cart</a>
                             </div>
                         </div>
                     </div><br />
@@ -246,7 +251,7 @@
                         <div class="col-md-4">
                             <div class="box">
                                 <div class="image">
-                                    <img src="assets/images/gallery1.jpg" alt="">
+                                    <img src="../assets/images/gallery1.jpg" alt="">
                                 </div>
                                 <div class="content">
                                     <div class="stars">
@@ -263,7 +268,7 @@
                         <div class="col-md-4">
                             <div class="box">
                                 <div class="image">
-                                    <img src="assets/images/gallery2.jpg" alt="">
+                                    <img src="../assets/images/gallery2.jpg" alt="">
                                 </div>
                                 <div class="content">
                                     <div class="stars">
@@ -280,7 +285,7 @@
                         <div class="col-md-4">
                             <div class="box">
                                 <div class="image">
-                                    <img src="assets/images/gallery3.jpg" alt="">
+                                    <img src="../assets/images/gallery3.jpg" alt="">
                                 </div>
                                 <div class="content">
                                     <div class="stars">
@@ -299,7 +304,7 @@
                         <div class="col-md-4">
                             <div class="box">
                                 <div class="image">
-                                    <img src="assets/images/gallery4.jpg" alt="">
+                                    <img src="../assets/images/gallery4.jpg" alt="">
                                 </div>
                                 <div class="content">
                                     <div class="stars">
@@ -316,7 +321,7 @@
                         <div class="col-md-4">
                             <div class="box">
                                 <div class="image">
-                                    <img src="assets/images/gallery4.jpg" alt="">
+                                    <img src="../assets/images/gallery4.jpg" alt="">
                                 </div>
                                 <div class="content">
                                     <div class="stars">
@@ -333,7 +338,7 @@
                         <div class="col-md-4">
                             <div class="box">
                                 <div class="image">
-                                    <img src="assets/images/gallery5.jpg" alt="">
+                                    <img src="../assets/images/gallery5.jpg" alt="">
                                 </div>
                                 <div class="content">
                                     <div class="stars">
@@ -364,7 +369,7 @@
                         <div class="col-md-4">
                             <div class="box">
                                 <div class="image">
-                                    <img src="assets/images/pour.jpg" alt="">
+                                    <img src="../assets/images/pour.jpg" alt="">
                                 </div>
                                 <div class="content">
                                     <a href="https://www.thewaytocoffee.com/batch-brew-vs-pour-over/" target="_blank" class="title text-decoration-none">Batch Brew vs. Pour Over | The Pros and Cons Experienced by Coffee Professionals</a>
@@ -379,7 +384,7 @@
                         <div class="col-md-4">
                             <div class="box">
                                 <div class="image">
-                                    <img src="assets/images/carbon.webp" alt="">
+                                    <img src="../assets/images/carbon.webp" alt="">
                                 </div>
                                 <div class="content">
                                     <a href="https://www.taylorsofharrogate.co.uk/news/carbon-neutral-tea-and-coffee" target="_blank" class="title text-decoration-none">Carbon Neutral Tea and Coffee</a>
@@ -394,7 +399,7 @@
                         <div class="col-md-4">
                             <div class="box">
                                 <div class="image">
-                                    <img src="assets/images/coffeemaker.jpg" alt="">
+                                    <img src="../assets/images/coffeemaker.jpg" alt="">
                                 </div>
                                 <div class="content">
                                     <a href="https://coffeestylish.com/best-drip-coffee-makers/" target="_blank" class="title text-decoration-none">BEST DRIP COFFEE MAKERS 2020</a>
@@ -419,12 +424,12 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="box">
-                                <img src="assets/images/quote-img.png" alt="" class="quote">
+                                <img src="../assets/images/quote-img.png" alt="" class="quote">
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 </p>
-                                <img src="assets/images/pic-1.png" alt="" class="user">
+                                <img src="../assets/images/pic-1.png" alt="" class="user">
                                 <h3>Jane Doe</h3>
                                 <div class="stars">
                                     <i class="fas fa-star"></i>
@@ -437,12 +442,12 @@
                         </div>
                         <div class="col-md-4">
                             <div class="box">
-                                <img src="assets/images/quote-img.png" alt="" class="quote">
+                                <img src="../assets/images/quote-img.png" alt="" class="quote">
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 </p>
-                                <img src="assets/images/pic-2.png" alt="" class="user">
+                                <img src="../assets/images/pic-2.png" alt="" class="user">
                                 <h3>John Doe</h3>
                                 <div class="stars">
                                     <i class="fas fa-star"></i>
@@ -455,12 +460,12 @@
                         </div>
                         <div class="col-md-4">
                             <div class="box">
-                                <img src="assets/images/quote-img.png" alt="" class="quote">
+                                <img src="../assets/images/quote-img.png" alt="" class="quote">
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 </p>
-                                <img src="assets/images/pic-3.png" alt="" class="user">
+                                <img src="../assets/images/pic-3.png" alt="" class="user">
                                 <h3>Jane Doe</h3>
                                 <div class="stars">
                                     <i class="fas fa-star"></i>
@@ -499,7 +504,7 @@
         <section class="footer">
             <div class="footer-container">
                 <div class="logo">
-                    <img src="assets/images/logo.png" class="img"><br />
+                    <img src="../assets/images/logo.png" class="img"><br />
                     <i class="fas fa-envelope"></i>
                     <p>abfiguerrez18@gmail.com</p><br />
                     <i class="fas fa-phone"></i>
@@ -578,8 +583,10 @@
         </div>
 
         <!-- JS File Link -->
-        <script src="assets/js/responses.js"></script>
-        <script src="assets/js/convo.js"></script>
+        <script src="../assets/js/googleSignIn.js"></script>
+        <script src="../assets/js/script.js"></script>
+        <script src="../assets/js/responses.js"></script>
+        <script src="../assets/js/convo.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
         <script>
@@ -631,16 +638,6 @@
                     }
                 });
             });
-
-            // CODE FOR THE REDIRECT CART
-            function redirectCart() {
-                // Check if the user is logged in
-                if(!"<?php echo isset($_SESSION["username"]) ? $_SESSION["username"] : '' ?>") {
-                    // Redirect the user to the login page
-                    alert("You are not logged in. Please log into your account and try again.");
-                    window.location.href = "users/login.php";
-                }
-            }
         </script> 
     </body>
 </html>
